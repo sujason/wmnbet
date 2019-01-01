@@ -15,5 +15,6 @@ This tool was created based on data acquired on ET FUS subjects.  The template i
 - python require.py
 
 ## Usage
+- Note that data should first be reoriented with fslreorient2std
 - python label_fusion.py check brain.json
 - python label_fusion.py do --tempdir temp --labelfusion average -p 2 brain.json image.nii.gz output/ brain icc
