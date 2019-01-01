@@ -1,0 +1,23 @@
+{
+    "path": "label_fusion_data/",
+    "image": "WMnMPRAGE.nii.gz",
+    "labels": {
+        "icc": [
+        	"3T_pre_CUBE_brain_mask_in_WMnMPRAGE.nii.gz",
+        	"3T_pre_CUBE_brain2_mask_in_WMnMPRAGE.nii.gz",
+        	"CUBE_brain_mask_in_WMnMPRAGE.nii.gz",
+        	"CUBE_brain2_mask_in_WMnMPRAGE.nii.gz"
+        ],
+        "brain": [
+        	"3T_pre_CSFnMPRAGE_brain_mask_in_WMnMPRAGE.nii.gz",
+        	"3T_pre_CSFnMPRAGE_brain2_mask_in_WMnMPRAGE.nii.gz",
+        	"CSFnMPRAGE_brain_mask_in_WMnMPRAGE.nii.gz",
+        	"CSFnMPRAGE_brain2_mask_in_WMnMPRAGE.nii.gz"
+        ]
+    },
+    "template": "template.nii.gz",
+    "template_transform_affine": "WMnMPRAGE_in_MeanAffine.txt",
+    "template_transform_warp": "WMnMPRAGE_in_MeanWarp.nii.gz",
+    "template_transform_inversewarp": "WMnMPRAGE_in_MeanInverseWarp.nii.gz",
+    "postprocess": "c3d %s -thresh 0.4 inf 1 0 -binarize -dilate 1 3x3x3vox -erode 1 3x3x3vox -median 3x3x3vox -o %s"
+}
