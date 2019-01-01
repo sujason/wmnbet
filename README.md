@@ -9,6 +9,11 @@ This tool was created based on data acquired on ET FUS subjects.  The template i
 - [FSL](http://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FslInstallation)
 - [convert3d](http://www.itksnap.org/pmwiki/pmwiki.php?n=Downloads.C3D)
 
+## Installation
+- git clone https://github.com/sujason/wmnbet.git
+- Extract wmnbet-priors.zip to label_fusion_data/
+- python require.py
+
 ## Usage
 - python label_fusion.py check brain.json
 - python label_fusion.py do --tempdir temp --labelfusion average -p 2 brain.json image.nii.gz output/ brain icc
