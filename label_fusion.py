@@ -22,11 +22,11 @@ import time
 import json
 import argparse
 import tempfile
-import parallel
 from shutil import rmtree
 from functools import partial
 from collections import OrderedDict
 from datetime import timedelta
+from libraries import parallel
 from libraries.imgtools import check_run, check_warps, sanitize_input, flip_lr, label_average, label_fusion_majority, label_fusion_picsl, ants_compose_a_to_b, ants_apply_only_warp
 from libraries.ants_nonlinear import ants_nonlinear_registration, bias_correct
 
