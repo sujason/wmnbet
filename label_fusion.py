@@ -26,6 +26,7 @@ from shutil import rmtree
 from functools import partial
 from collections import OrderedDict
 from datetime import timedelta
+from constants import this_path
 from libraries import parallel
 from libraries.imgtools import check_run, check_warps, sanitize_input, flip_lr, label_average, label_fusion_majority, label_fusion_picsl, ants_compose_a_to_b, ants_apply_only_warp
 from libraries.ants_nonlinear import ants_nonlinear_registration, bias_correct
@@ -260,7 +261,7 @@ def main(args, config, template, priors, temp_path, pool, exec_options):
         files = [(out_file, out_file) for in_file, out_file in files]
     # Resort output to original ordering
     pool.map(parallel_command,
-        ['%s %s %s %s' % ('/RAID/THOMAS/distro/swapdimlike.py', in_file, orig_input_image, out_file) for in_file, out_file in files])
+        ['%s %s %s %s' % (os.path.join(this_path, 'swapdimlike.py'), in_file, orig_input_image, out_file) for in_file, out_file in files])
     print '--- Finished --- Elapsed: %s' % timedelta(seconds=time.time() - t)
 
 

@@ -1,5 +1,5 @@
 """
-Paths, names, optimized hyper-parameters, and other constants for THOMAS.
+Paths, names, optimized hyper-parameters, and other constants for wmnbet.
 """
 import os
 import json
